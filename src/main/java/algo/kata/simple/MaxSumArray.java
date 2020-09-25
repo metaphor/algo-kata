@@ -6,7 +6,6 @@ import static java.util.Arrays.copyOfRange;
 
 public final class MaxSumArray {
     public static int maxSum(int[] nums) {
-        System.out.println(Arrays.toString(nums));
         if (nums.length == 1) return nums[0];
         int max = Arrays.stream(nums).sum();
         int leftMax = maxSum(copyOfRange(nums, 0, nums.length - 1));
